@@ -1,6 +1,7 @@
 # main.py
 # Student Grade Calculator
 
+
 def calculate_grade(average):
     if average >= 90:
         return "A"
