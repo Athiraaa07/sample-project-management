@@ -25,3 +25,20 @@ This repository contains a simple project demonstrating Agile workflow using Git
  -Total Marks
  -Average Marks
  -Grade (A, B, C, D, or F)
+
+ #How to Run the Project:
+1. Make sure you have Python 3 installed on your computer.
+2. Download or clone this repository:
+    git clone https://github.com/your-username/sample-project-management.git
+3. Open the project folder in your terminal or VS Code.
+4. Run the program using the command:
+    python main.py
+5. Follow the on-screen instructions to enter student name and marks.
+The program will display total marks, average, and grade.
+
+#Tools / Libraries Used:
+1. Python 3.x – main programming language used for logic and calculations
+2. Git & GitHub – for version control and collaborative workflow
+
+#Contributors and Roles:
+Athira Girish-developer 
