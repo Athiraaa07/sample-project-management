@@ -1,6 +1,5 @@
 # main.py
-# Student Grade Calculator
-
+# Student Grade Calculator with input validation for marks
 
 def calculate_grade(average):
     if average >= 90:
@@ -17,21 +16,39 @@ def calculate_grade(average):
 def main():
     print("=== Student Grade Calculator ===")
     name = input("Enter student name: ")
-    num_subjects = int(input("Enter number of subjects: "))
+
+    
+    while True:
+        try:
+            num_subjects = int(input("Enter number of subjects: "))
+            if num_subjects > 0:
+                break
+            else:
+                print("Number of subjects must be positive.")
+        except ValueError:
+            print("Please enter a valid integer.")
 
     marks = []
     for i in range(num_subjects):
-        mark = float(input(f"Enter mark for subject {i+1}: "))
-        marks.append(mark)
+        while True:
+            try:
+                mark = float(input(f"Enter mark for subject {i+1}: "))
+                if 0 <= mark <= 100:
+                    marks.append(mark)
+                    break
+                else:
+                    print("Mark must be between 0 and 100.")
+            except ValueError:
+                print("Please enter a valid number.")
 
     total = sum(marks)
-    average = total / num_subjects
+    average = round(total / num_subjects, 2)
     grade = calculate_grade(average)
 
     print("\n--- Result ---")
     print(f"Name: {name}")
     print(f"Total Marks: {total}")
-    print(f"Average: {average:.2f}")
+    print(f"Average: {average}")
     print(f"Grade: {grade}")
 
 if __name__ == "__main__":
